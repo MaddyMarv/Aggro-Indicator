@@ -60,16 +60,16 @@ return {
         en = "Detect Pox Bursters",
     },
     aggro_disabler_enabled = {
-        en = "Detect Disablers (Hounds, Trappers, Mutants)",
+        en = "Detect Disablers",
     },
     aggro_sniper_enabled = {
         en = "Detect Snipers",
     },
     aggro_captain_enabled = {
-        en = "Detect Captains (Assassination Targets)",
+        en = "Detect Captains",
     },
     aggro_monstrosity_enabled = {
-        en = "Detect Monstrosities (Plague Ogryns, Beasts of Nurgle, Chaos Spawns)",
+        en = "Detect Monstrosities",
     },
     aggro_daemonhost_enabled = {
         en = "Detect Daemonhosts",
