@@ -1,12 +1,9 @@
 local mod = get_mod("aggro_indicator")
 
--- Load the aggro detection module
 mod:io_dofile("aggro_indicator/scripts/mods/aggro_indicator/aggro_detection")
 
--- Register the HUD element class
 mod:add_require_path("aggro_indicator/scripts/mods/aggro_indicator/hud_element_aggro_indicator")
 
--- Inject HUD element into UIHud
 mod:hook("UIHud", "init", function(func, self, elements, visibility_groups, params)
     if not table.find_by_key(elements, "class_name", "HudElementAggroIndicator") then
         table.insert(elements, {

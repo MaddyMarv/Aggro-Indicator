@@ -2,7 +2,6 @@ local mod = get_mod("aggro_indicator")
 
 local AggroDetection = {}
 
--- Aggro categories in priority order (highest first)
 AggroDetection.AGGRO_NONE = nil
 AggroDetection.AGGRO_DISABLER = "disabler"
 AggroDetection.AGGRO_CAPTAIN = "captain"
@@ -31,7 +30,6 @@ local AGGRO_PRIORITY = {
 local SCAN_INTERVAL = 0.25
 local _last_scan_time = 0
 
--- player_unit -> { type = "monstrosity", enemy_unit = unit }
 local _aggro_state = {}
 
 local function _classify_enemy(enemy_unit)
@@ -89,7 +87,6 @@ local function _classify_enemy(enemy_unit)
         return AggroDetection.AGGRO_POX_BURSTER
     end
 
-    -- Catch-all: any is_boss breed not caught above gets classified as captain
     if breed.is_boss then
         return AggroDetection.AGGRO_CAPTAIN
     end
@@ -133,7 +130,6 @@ local function _resolve_target_from_game_object(enemy_unit, game_session, unit_s
     return nil
 end
 
--- Fallback: read the perception extension's target directly
 local function _resolve_target_from_perception(enemy_unit, perception_map)
     if not perception_map then
         return nil
@@ -199,7 +195,6 @@ function AggroDetection.scan(dt)
         return
     end
 
-    -- Resolve game session and unit spawner once
     local game_session_manager = Managers.state.game_session
     local unit_spawner = Managers.state.unit_spawner
 
@@ -211,7 +206,6 @@ function AggroDetection.scan(dt)
         end
     end
 
-    -- Resolve perception map once
     local perception_system = extension_manager:system("perception_system")
     local perception_map = nil
     if perception_system and type(perception_system.unit_to_extension_map) == "function" then
@@ -242,7 +236,6 @@ function AggroDetection.scan(dt)
     local enable_flamer = mod:get("aggro_flamer_enabled")
     if enable_flamer == nil then enable_flamer = false end
 
-    -- Iterate all units in the side system
     for unit, _ in pairs(side_system.side_by_unit) do
         if HEALTH_ALIVE[unit] and Unit.alive(unit) then
             local unit_side = side_system.side_by_unit[unit]
@@ -262,7 +255,6 @@ function AggroDetection.scan(dt)
                 local aggro_type = _classify_enemy(unit)
 
                 if aggro_type then
-                    -- Filter based on settings
                     local allowed = false
                     if aggro_type == AggroDetection.AGGRO_DAEMONHOST then
                         allowed = enable_daemonhost
@@ -287,7 +279,6 @@ function AggroDetection.scan(dt)
                     end
 
                     if allowed then
-                        -- Resolve the enemy's target
                         local target_unit = nil
                         if game_session and unit_spawner then
                             target_unit = _resolve_target_from_game_object(unit, game_session, unit_spawner)
@@ -296,7 +287,6 @@ function AggroDetection.scan(dt)
                             target_unit = _resolve_target_from_perception(unit, perception_map)
                         end
 
-                        -- Only care if targeting a player
                         if target_unit and _is_player_unit(target_unit) then
                             local existing = _aggro_state[target_unit]
                             local new_priority = AGGRO_PRIORITY[aggro_type] or 0
