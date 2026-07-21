@@ -16,14 +16,14 @@ AggroDetection.AGGRO_FLAMER = "flamer"
 
 local AGGRO_PRIORITY = {
     pox_burster = 10,
-    daemonhost = 9,
-    captain = 8,
-    monstrosity = 7,
-    disabler = 6,
-    sniper = 5,
+    disabler = 9,
+    sniper = 8,
+    captain = 7,
+    monstrosity = 6,
+    daemonhost = 5,
     grenadier = 4,
-    flamer = 3,
-    crusher = 2,
+    crusher = 3,
+    flamer = 2,
     rager = 1,
 }
 
@@ -297,6 +297,21 @@ function AggroDetection.scan(dt)
                                     type = aggro_type,
                                     enemy_unit = unit,
                                 }
+                            elseif new_priority == existing_priority and existing then
+                                local target_pos = POSITION_LOOKUP[target_unit] or (Unit.alive(target_unit) and Unit.local_position(target_unit, 1))
+                                local current_enemy_pos = POSITION_LOOKUP[existing.enemy_unit] or (Unit.alive(existing.enemy_unit) and Unit.local_position(existing.enemy_unit, 1))
+                                local new_enemy_pos = POSITION_LOOKUP[unit] or (Unit.alive(unit) and Unit.local_position(unit, 1))
+                                
+                                if target_pos and current_enemy_pos and new_enemy_pos then
+                                    local current_dist = Vector3.distance_squared(target_pos, current_enemy_pos)
+                                    local new_dist = Vector3.distance_squared(target_pos, new_enemy_pos)
+                                    if new_dist < current_dist then
+                                        _aggro_state[target_unit] = {
+                                            type = aggro_type,
+                                            enemy_unit = unit,
+                                        }
+                                    end
+                                end
                             end
                         end
                     end
@@ -308,7 +323,10 @@ end
 
 function AggroDetection.get_aggro_for_unit(player_unit)
     local state = _aggro_state[player_unit]
-    return state and state.type or nil
+    if state then
+        return state.type, state.enemy_unit
+    end
+    return nil, nil
 end
 
 function AggroDetection.clear()

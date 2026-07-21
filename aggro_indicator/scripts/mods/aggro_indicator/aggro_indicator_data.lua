@@ -41,13 +41,30 @@ local widgets = {
             {
                 setting_id = "indicator_size",
                 type = "numeric",
-                range = { 1, 100 },
-                default_value = 15,
+                range = { 1, 50 },
+                default_value = 13,
             },
             {
                 setting_id = "always_on",
                 type = "checkbox",
                 default_value = false,
+            },
+            {
+                setting_id = "show_facing_arrow",
+                type = "checkbox",
+                default_value = true,
+            },
+            {
+                setting_id = "arrow_size",
+                type = "numeric",
+                range = { 1, 50 },
+                default_value = 16,
+            },
+            {
+                setting_id = "arrow_orbit_distance",
+                type = "numeric",
+                range = { 0, 50 },
+                default_value = 10,
             },
         },
     },

@@ -35,6 +35,15 @@ return {
     always_on = {
         en = "Always On (Grey when not targeted)",
     },
+    show_facing_arrow = {
+        en = "Show Facing Arrow",
+    },
+    arrow_size = {
+        en = "Arrow Size",
+    },
+    arrow_orbit_distance = {
+        en = "Arrow Orbit Distance",
+    },
     indicator_horizontal_alignment = {
         en = "Horizontal Alignment",
     },
