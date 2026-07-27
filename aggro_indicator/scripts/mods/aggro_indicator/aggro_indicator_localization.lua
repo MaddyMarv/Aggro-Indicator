@@ -68,8 +68,14 @@ return {
     aggro_pox_burster_enabled = {
         en = "Detect Pox Bursters",
     },
-    aggro_disabler_enabled = {
-        en = "Detect Disablers",
+    aggro_trapper_enabled = {
+        en = "Detect Trappers",
+    },
+    aggro_dog_enabled = {
+        en = "Detect Hounds",
+    },
+    aggro_mutant_enabled = {
+        en = "Detect Mutants",
     },
     aggro_sniper_enabled = {
         en = "Detect Snipers",
@@ -98,8 +104,14 @@ return {
     aggro_pox_burster_header = {
         en = "Pox Burster Color",
     },
-    aggro_disabler_header = {
-        en = "Disabler Color",
+    aggro_trapper_header = {
+        en = "Trapper Color",
+    },
+    aggro_dog_header = {
+        en = "Hound Color",
+    },
+    aggro_mutant_header = {
+        en = "Mutant Color",
     },
     aggro_sniper_header = {
         en = "Sniper Color",
@@ -128,9 +140,15 @@ return {
     aggro_pox_burster_r = { en = "Red" },
     aggro_pox_burster_g = { en = "Green" },
     aggro_pox_burster_b = { en = "Blue" },
-    aggro_disabler_r = { en = "Red" },
-    aggro_disabler_g = { en = "Green" },
-    aggro_disabler_b = { en = "Blue" },
+    aggro_trapper_r = { en = "Red" },
+    aggro_trapper_g = { en = "Green" },
+    aggro_trapper_b = { en = "Blue" },
+    aggro_dog_r = { en = "Red" },
+    aggro_dog_g = { en = "Green" },
+    aggro_dog_b = { en = "Blue" },
+    aggro_mutant_r = { en = "Red" },
+    aggro_mutant_g = { en = "Green" },
+    aggro_mutant_b = { en = "Blue" },
     aggro_sniper_r = { en = "Red" },
     aggro_sniper_g = { en = "Green" },
     aggro_sniper_b = { en = "Blue" },

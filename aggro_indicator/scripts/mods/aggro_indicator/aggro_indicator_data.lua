@@ -42,7 +42,7 @@ local widgets = {
                 setting_id = "indicator_size",
                 type = "numeric",
                 range = { 1, 50 },
-                default_value = 13,
+                default_value = 25,
             },
             {
                 setting_id = "always_on",
@@ -64,7 +64,7 @@ local widgets = {
                 setting_id = "arrow_orbit_distance",
                 type = "numeric",
                 range = { 0, 50 },
-                default_value = 10,
+                default_value = 5,
             },
         },
     },
@@ -74,7 +74,9 @@ local widgets = {
         tab = mod:localize("tab_aggro"),
         sub_widgets = {
             { setting_id = "aggro_pox_burster_enabled", type = "checkbox", default_value = true },
-            { setting_id = "aggro_disabler_enabled", type = "checkbox", default_value = true },
+            { setting_id = "aggro_trapper_enabled", type = "checkbox", default_value = true },
+            { setting_id = "aggro_dog_enabled", type = "checkbox", default_value = true },
+            { setting_id = "aggro_mutant_enabled", type = "checkbox", default_value = true },
             { setting_id = "aggro_sniper_enabled", type = "checkbox", default_value = true },
             { setting_id = "aggro_captain_enabled", type = "checkbox", default_value = true },
             { setting_id = "aggro_monstrosity_enabled", type = "checkbox", default_value = true },
@@ -89,7 +91,9 @@ local widgets = {
 
 local aggro_types = {
     { "aggro_pox_burster", { 255, 255, 0 } },
-    { "aggro_disabler", { 77, 0, 255 } },
+    { "aggro_trapper", { 70, 0, 150 } },
+    { "aggro_dog", { 150, 0, 255 } },
+    { "aggro_mutant", { 120, 77, 255 } },
     { "aggro_sniper", { 0, 255, 255 } },
     { "aggro_captain", { 255, 96, 0 } },
     { "aggro_monstrosity", { 255, 0, 0 } },

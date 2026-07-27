@@ -8,5 +8,8 @@ return {
             mod_localization = "aggro_indicator/scripts/mods/aggro_indicator/aggro_indicator_localization",
         })
     end,
-    packages = {},
+    packages = {
+        "packages/ui/hud/crosshair/crosshair",
+        "packages/ui/views/escape_menu/escape_menu"
+    },
 }

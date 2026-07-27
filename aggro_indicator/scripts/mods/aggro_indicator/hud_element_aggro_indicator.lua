@@ -19,7 +19,8 @@ local scenegraph_definition = {
 local widget_definitions = {
     indicator = UIWidget.create_definition({
         {
-            pass_type = "circle",
+            pass_type = "texture",
+            value = "content/ui/materials/icons/system/escape/settings",
             style_id = "circle_indicator",
             style = {
                 vertical_alignment = "center",
@@ -32,10 +33,10 @@ local widget_definitions = {
         {
             style_id = "facing_arrow",
             pass_type = "rotated_texture",
-            value = "content/ui/materials/icons/circumstances/more_resistance_01",
+            value = "content/ui/materials/buttons/arrow_01",
             style = {
-                horizontal_alignment = "center",
                 vertical_alignment = "center",
+                horizontal_alignment = "center",
                 color = { 0, 255, 255, 255 },
                 offset = { 0, 0, 4 },
                 size = { 18, 18 },
@@ -84,7 +85,7 @@ HudElementAggroIndicator.update = function(self, dt, t, ui_renderer, render_sett
 
     local aggro_type, enemy_unit = AggroDetection.get_aggro_for_unit(local_player.player_unit)
     
-    local size = mod:get("indicator_size") or 15
+    local size = mod:get("indicator_size") or 25
     self._indicator_widget.style.circle_indicator.size[1] = size
     self._indicator_widget.style.circle_indicator.size[2] = size
     
@@ -115,14 +116,14 @@ HudElementAggroIndicator.update = function(self, dt, t, ui_renderer, render_sett
                 
                 local angle = -(dir_yaw - camera_yaw)
                 
-                self._indicator_widget.style.facing_arrow.angle = -angle
+                self._indicator_widget.style.facing_arrow.angle = (math.pi / 2) - angle
                 local arrow_size = mod:get("arrow_size") or 18
                 self._indicator_widget.style.facing_arrow.size[1] = arrow_size
                 self._indicator_widget.style.facing_arrow.size[2] = arrow_size
                 self._indicator_widget.style.facing_arrow.pivot[1] = arrow_size / 2
                 self._indicator_widget.style.facing_arrow.pivot[2] = arrow_size / 2
                 
-                local arrow_orbit_dist = mod:get("arrow_orbit_distance") or 12
+                local arrow_orbit_dist = mod:get("arrow_orbit_distance") or 5
                 local orbit_radius = (size * 0.5) + arrow_orbit_dist
                 self._indicator_widget.style.facing_arrow.offset[1] = orbit_radius * math.sin(angle)
                 self._indicator_widget.style.facing_arrow.offset[2] = -orbit_radius * math.cos(angle)

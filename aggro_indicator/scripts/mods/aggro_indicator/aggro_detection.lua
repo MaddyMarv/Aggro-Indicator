@@ -3,20 +3,24 @@ local mod = get_mod("aggro_indicator")
 local AggroDetection = {}
 
 AggroDetection.AGGRO_NONE = nil
-AggroDetection.AGGRO_DISABLER = "disabler"
+AggroDetection.AGGRO_POX_BURSTER = "pox_burster"
+AggroDetection.AGGRO_TRAPPER = "trapper"
+AggroDetection.AGGRO_DOG = "dog"
+AggroDetection.AGGRO_MUTANT = "mutant"
+AggroDetection.AGGRO_SNIPER = "sniper"
 AggroDetection.AGGRO_CAPTAIN = "captain"
 AggroDetection.AGGRO_MONSTROSITY = "monstrosity"
 AggroDetection.AGGRO_DAEMONHOST = "daemonhost"
-AggroDetection.AGGRO_POX_BURSTER = "pox_burster"
-AggroDetection.AGGRO_SNIPER = "sniper"
-AggroDetection.AGGRO_CRUSHER = "crusher"
-AggroDetection.AGGRO_RAGER = "rager"
 AggroDetection.AGGRO_GRENADIER = "grenadier"
+AggroDetection.AGGRO_CRUSHER = "crusher"
 AggroDetection.AGGRO_FLAMER = "flamer"
+AggroDetection.AGGRO_RAGER = "rager"
 
 local AGGRO_PRIORITY = {
-    pox_burster = 10,
-    disabler = 9,
+    pox_burster = 12,
+    trapper = 11,
+    dog = 10,
+    mutant = 9,
     sniper = 8,
     captain = 7,
     monstrosity = 6,
@@ -75,8 +79,16 @@ local function _classify_enemy(enemy_unit)
         return AggroDetection.AGGRO_MONSTROSITY
     end
 
-    if tags.disabler then
-        return AggroDetection.AGGRO_DISABLER
+    if breed_name == "chaos_hound" or breed_name == "chaos_hound_mutator" then
+        return AggroDetection.AGGRO_DOG
+    end
+
+    if breed_name == "renegade_netgunner" or breed_name == "cultist_netgunner" then
+        return AggroDetection.AGGRO_TRAPPER
+    end
+
+    if breed_name == "chaos_mutant_charger" or breed_name == "chaos_mutant_mutator" or breed_name == "chaos_mutant" then
+        return AggroDetection.AGGRO_MUTANT
     end
 
     if tags.sniper then
@@ -215,26 +227,30 @@ function AggroDetection.scan(dt)
         end
     end
 
-    local enable_daemonhost = mod:get("aggro_daemonhost_enabled")
-    if enable_daemonhost == nil then enable_daemonhost = true end
-    local enable_monstrosity = mod:get("aggro_monstrosity_enabled")
-    if enable_monstrosity == nil then enable_monstrosity = true end
-    local enable_captain = mod:get("aggro_captain_enabled")
-    if enable_captain == nil then enable_captain = true end
-    local enable_disabler = mod:get("aggro_disabler_enabled")
-    if enable_disabler == nil then enable_disabler = true end
-    local enable_sniper = mod:get("aggro_sniper_enabled")
-    if enable_sniper == nil then enable_sniper = true end
     local enable_pox_burster = mod:get("aggro_pox_burster_enabled")
     if enable_pox_burster == nil then enable_pox_burster = true end
-    local enable_crusher = mod:get("aggro_crusher_enabled")
-    if enable_crusher == nil then enable_crusher = false end
-    local enable_rager = mod:get("aggro_rager_enabled")
-    if enable_rager == nil then enable_rager = false end
+    local enable_trapper = mod:get("aggro_trapper_enabled")
+    if enable_trapper == nil then enable_trapper = true end
+    local enable_dog = mod:get("aggro_dog_enabled")
+    if enable_dog == nil then enable_dog = true end
+    local enable_mutant = mod:get("aggro_mutant_enabled")
+    if enable_mutant == nil then enable_mutant = true end
+    local enable_sniper = mod:get("aggro_sniper_enabled")
+    if enable_sniper == nil then enable_sniper = true end
+    local enable_captain = mod:get("aggro_captain_enabled")
+    if enable_captain == nil then enable_captain = true end
+    local enable_monstrosity = mod:get("aggro_monstrosity_enabled")
+    if enable_monstrosity == nil then enable_monstrosity = true end
+    local enable_daemonhost = mod:get("aggro_daemonhost_enabled")
+    if enable_daemonhost == nil then enable_daemonhost = true end
     local enable_grenadier = mod:get("aggro_grenadier_enabled")
     if enable_grenadier == nil then enable_grenadier = false end
+    local enable_crusher = mod:get("aggro_crusher_enabled")
+    if enable_crusher == nil then enable_crusher = false end
     local enable_flamer = mod:get("aggro_flamer_enabled")
     if enable_flamer == nil then enable_flamer = false end
+    local enable_rager = mod:get("aggro_rager_enabled")
+    if enable_rager == nil then enable_rager = false end
 
     for unit, _ in pairs(side_system.side_by_unit) do
         if HEALTH_ALIVE[unit] and Unit.alive(unit) then
@@ -256,26 +272,30 @@ function AggroDetection.scan(dt)
 
                 if aggro_type then
                     local allowed = false
-                    if aggro_type == AggroDetection.AGGRO_DAEMONHOST then
-                        allowed = enable_daemonhost
-                    elseif aggro_type == AggroDetection.AGGRO_MONSTROSITY then
-                        allowed = enable_monstrosity
-                    elseif aggro_type == AggroDetection.AGGRO_CAPTAIN then
-                        allowed = enable_captain
-                    elseif aggro_type == AggroDetection.AGGRO_DISABLER then
-                        allowed = enable_disabler
+                    if aggro_type == AggroDetection.AGGRO_POX_BURSTER then
+                        allowed = enable_pox_burster
+                    elseif aggro_type == AggroDetection.AGGRO_TRAPPER then
+                        allowed = enable_trapper
+                    elseif aggro_type == AggroDetection.AGGRO_DOG then
+                        allowed = enable_dog
+                    elseif aggro_type == AggroDetection.AGGRO_MUTANT then
+                        allowed = enable_mutant
                     elseif aggro_type == AggroDetection.AGGRO_SNIPER then
                         allowed = enable_sniper
-                    elseif aggro_type == AggroDetection.AGGRO_POX_BURSTER then
-                        allowed = enable_pox_burster
-                    elseif aggro_type == AggroDetection.AGGRO_CRUSHER then
-                        allowed = enable_crusher
-                    elseif aggro_type == AggroDetection.AGGRO_RAGER then
-                        allowed = enable_rager
+                    elseif aggro_type == AggroDetection.AGGRO_CAPTAIN then
+                        allowed = enable_captain
+                    elseif aggro_type == AggroDetection.AGGRO_MONSTROSITY then
+                        allowed = enable_monstrosity
+                    elseif aggro_type == AggroDetection.AGGRO_DAEMONHOST then
+                        allowed = enable_daemonhost
                     elseif aggro_type == AggroDetection.AGGRO_GRENADIER then
                         allowed = enable_grenadier
+                    elseif aggro_type == AggroDetection.AGGRO_CRUSHER then
+                        allowed = enable_crusher
                     elseif aggro_type == AggroDetection.AGGRO_FLAMER then
                         allowed = enable_flamer
+                    elseif aggro_type == AggroDetection.AGGRO_RAGER then
+                        allowed = enable_rager
                     end
 
                     if allowed then
