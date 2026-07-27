@@ -87,7 +87,7 @@ local function _classify_enemy(enemy_unit)
         return AggroDetection.AGGRO_TRAPPER
     end
 
-    if breed_name == "chaos_mutant_charger" or breed_name == "chaos_mutant_mutator" or breed_name == "chaos_mutant" then
+    if breed_name == "chaos_mutant_charger" or breed_name == "chaos_mutant_mutator" or breed_name == "chaos_mutant" or breed_name == "cultist_mutant" or breed_name == "cultist_mutant_mutator" then
         return AggroDetection.AGGRO_MUTANT
     end
 
