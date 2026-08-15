@@ -2,13 +2,13 @@ local mod = get_mod("aggro_indicator")
 
 mod:io_dofile("aggro_indicator/scripts/mods/aggro_indicator/aggro_detection")
 
-mod:add_require_path("aggro_indicator/scripts/mods/aggro_indicator/hud_element_aggro_indicator")
+mod:add_require_path("aggro_indicator/scripts/mods/aggro_indicator/hud/hud_element_aggro_indicator")
 
 mod:hook("UIHud", "init", function(func, self, elements, visibility_groups, params)
     if not table.find_by_key(elements, "class_name", "HudElementAggroIndicator") then
         table.insert(elements, {
             class_name = "HudElementAggroIndicator",
-            filename = "aggro_indicator/scripts/mods/aggro_indicator/hud_element_aggro_indicator",
+            filename = "aggro_indicator/scripts/mods/aggro_indicator/hud/hud_element_aggro_indicator",
             use_hud_scale = true,
             visibility_groups = {
                 "alive",
