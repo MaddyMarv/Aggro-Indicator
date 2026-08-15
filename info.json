@@ -1,0 +1,14 @@
+{
+    "name": "Aggro Indicator",
+    "author": "IndicaBunny",
+    "version": "1.3",
+    "source": "https://github.com/MaddyMarv/Aggro-Indicator",
+    "kofi": "https://ko-fi.com/indicabunny",
+    "description": "Adds a small circle to your HUD so you know exactly what is targeting you. Coloured based on the highest priority enemy!",
+    "order": {
+        "require": [],
+        "this_before": [],
+        "this_after": []
+    },
+    "localization": {}
+}
