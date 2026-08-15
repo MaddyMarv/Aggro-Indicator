@@ -101,76 +101,40 @@ return {
     aggro_rager_enabled = {
         en = "Detect Ragers",
     },
-    aggro_pox_burster_header = {
+    aggro_pox_burster_color = {
         en = "Pox Burster Color",
     },
-    aggro_trapper_header = {
+    aggro_trapper_color = {
         en = "Trapper Color",
     },
-    aggro_dog_header = {
+    aggro_dog_color = {
         en = "Hound Color",
     },
-    aggro_mutant_header = {
+    aggro_mutant_color = {
         en = "Mutant Color",
     },
-    aggro_sniper_header = {
+    aggro_sniper_color = {
         en = "Sniper Color",
     },
-    aggro_captain_header = {
+    aggro_captain_color = {
         en = "Captain Color",
     },
-    aggro_monstrosity_header = {
+    aggro_monstrosity_color = {
         en = "Monstrosity Color",
     },
-    aggro_daemonhost_header = {
+    aggro_daemonhost_color = {
         en = "Daemonhost Color",
     },
-    aggro_grenadier_header = {
+    aggro_grenadier_color = {
         en = "Bomber Color",
     },
-    aggro_crusher_header = {
+    aggro_crusher_color = {
         en = "Crusher Color",
     },
-    aggro_flamer_header = {
+    aggro_flamer_color = {
         en = "Flamer Color",
     },
-    aggro_rager_header = {
+    aggro_rager_color = {
         en = "Rager Color",
     },
-    aggro_pox_burster_r = { en = "Red" },
-    aggro_pox_burster_g = { en = "Green" },
-    aggro_pox_burster_b = { en = "Blue" },
-    aggro_trapper_r = { en = "Red" },
-    aggro_trapper_g = { en = "Green" },
-    aggro_trapper_b = { en = "Blue" },
-    aggro_dog_r = { en = "Red" },
-    aggro_dog_g = { en = "Green" },
-    aggro_dog_b = { en = "Blue" },
-    aggro_mutant_r = { en = "Red" },
-    aggro_mutant_g = { en = "Green" },
-    aggro_mutant_b = { en = "Blue" },
-    aggro_sniper_r = { en = "Red" },
-    aggro_sniper_g = { en = "Green" },
-    aggro_sniper_b = { en = "Blue" },
-    aggro_captain_r = { en = "Red" },
-    aggro_captain_g = { en = "Green" },
-    aggro_captain_b = { en = "Blue" },
-    aggro_monstrosity_r = { en = "Red" },
-    aggro_monstrosity_g = { en = "Green" },
-    aggro_monstrosity_b = { en = "Blue" },
-    aggro_daemonhost_r = { en = "Red" },
-    aggro_daemonhost_g = { en = "Green" },
-    aggro_daemonhost_b = { en = "Blue" },
-    aggro_grenadier_r = { en = "Red" },
-    aggro_grenadier_g = { en = "Green" },
-    aggro_grenadier_b = { en = "Blue" },
-    aggro_crusher_r = { en = "Red" },
-    aggro_crusher_g = { en = "Green" },
-    aggro_crusher_b = { en = "Blue" },
-    aggro_flamer_r = { en = "Red" },
-    aggro_flamer_g = { en = "Green" },
-    aggro_flamer_b = { en = "Blue" },
-    aggro_rager_r = { en = "Red" },
-    aggro_rager_g = { en = "Green" },
-    aggro_rager_b = { en = "Blue" },
 }

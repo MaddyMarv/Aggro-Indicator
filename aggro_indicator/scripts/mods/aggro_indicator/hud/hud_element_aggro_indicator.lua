@@ -97,9 +97,10 @@ HudElementAggroIndicator.update = function(self, dt, t, ui_renderer, render_sett
     self._indicator_widget.style.circle_indicator.size[2] = size
     
     if aggro_type then
-        local r = mod:get("aggro_" .. aggro_type .. "_r") or 255
-        local g = mod:get("aggro_" .. aggro_type .. "_g") or 0
-        local b = mod:get("aggro_" .. aggro_type .. "_b") or 0
+        local color = mod:get("aggro_" .. aggro_type .. "_color") or { 255, 255, 0, 0 }
+        local r = color[2] or 255
+        local g = color[3] or 0
+        local b = color[4] or 0
         
         self._indicator_widget.style.circle_indicator.color[1] = 255
         self._indicator_widget.style.circle_indicator.color[2] = r
