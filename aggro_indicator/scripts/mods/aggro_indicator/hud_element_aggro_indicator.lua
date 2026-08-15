@@ -74,6 +74,13 @@ HudElementAggroIndicator.update = function(self, dt, t, ui_renderer, render_sett
         return
     end
 
+    local game_mode_name = Managers.state.game_mode and Managers.state.game_mode:game_mode_name()
+    if game_mode_name == "hub" then
+        self._indicator_widget.style.circle_indicator.color[1] = 0
+        self._indicator_widget.style.facing_arrow.color[1] = 0
+        return
+    end
+
     AggroDetection.scan(dt)
     
     local local_player = Managers.player and Managers.player:local_player(1)

@@ -10,6 +10,6 @@ return {
     end,
     packages = {
         "packages/ui/hud/crosshair/crosshair",
-        "packages/ui/views/escape_menu/escape_menu"
+        "packages/ui/views/system_view/system_view"
     },
 }
