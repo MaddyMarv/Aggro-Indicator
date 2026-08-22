@@ -8,11 +8,8 @@
         "kofi": "https://ko-fi.com/indicabunny"
     },
     "description": "Adds a small circle to your HUD so you know exactly what is targeting you. Coloured based on the highest priority enemy!",
-    "dependencies": {
-        "required": [],
-        "optional": [],
-        "self_before": [],
-        "self_after": []
-    },
+    "required": [],
+    "self_before": [],
+    "self_after": [],
     "localization": {}
 }
