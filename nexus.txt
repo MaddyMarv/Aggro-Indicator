@@ -1,0 +1,23 @@
+Standalone mod that adds a small, customizable circle near your crosshair that lights up when an enemy targets you. It uses color-coding to let you instantly know what kind of threat is targeting you (e.g., Pox Bursters, Trappers, Snipers). You can toggle detection for specific enemy types, change the exact colors for each threat, and freely adjust the circle's size and position anywhere on your screen.
+
+[b]Fully compatible with Custom HUD![/b]
+
+[b]Options:[/b]
+
+[b]General Settings[/b]
+- Indicator X/Y Offset
+- Horizontal Alignment [Left, Center, Right]
+- Vertical Alignment [Top, Center, Bottom]
+- Indicator Size
+- Always On (Grey when not targeted)
+- Show Facing Arrow
+- Arrow Size
+- Arrow Orbit Distance
+
+[b]Aggro Detection (Types)[/b]
+- Threat Detection Options (Pox Bursters, Trappers, Hounds, Mutants, Snipers, Captains, Monstrosities, Daemonhosts, Bombers, Crushers, Flamers, Tox Flamers, Dreg Ragers, Scab Ragers)
+
+[b]Aggro Detection Colors[/b]
+- Threat Color Options (Pox Burster, Trapper, Hound, Mutant, Sniper, Captain, Monstrosity, Daemonhost, Bomber, Crusher, Flamer, Tox Flamer, Dreg Rager, Scab Rager)
+
+[b]Links:[/b] [url=https://github.com/MaddyMarv/Aggro-Indicator]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
