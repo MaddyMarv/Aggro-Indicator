@@ -3,7 +3,7 @@ return {
         en = "Aggro Indicator",
     },
     mod_description = {
-        en = "Adds an indicator near your crosshair that lights up and color codes enemies targeting you (Pox Bursters, Trappers, Snipers, etc.).",
+        en = "Adds an indicator near your crosshair that lights up and color-codes enemies targeting you (Pox Bursters, Trappers, Snipers, etc.).",
     },
     tab_general = {
         en = "General Settings",

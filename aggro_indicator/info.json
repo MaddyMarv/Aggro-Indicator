@@ -7,7 +7,7 @@
     "funding": {
         "kofi": "https://ko-fi.com/indicabunny"
     },
-    "description": "Adds an indicator near your crosshair that lights up and color codes enemies targeting you (Pox Bursters, Trappers, Snipers, etc.).",
+    "description": "Adds an indicator near your crosshair that lights up and color-codes enemies targeting you (Pox Bursters, Trappers, Snipers, etc.).",
     "dependencies": {
         "required": [],
         "self_after": [],

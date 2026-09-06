@@ -1,7 +1,7 @@
 ### [Aggro Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/1062)
 <img width="637" height="475" alt="image" src="https://github.com/user-attachments/assets/1759e368-c1dc-4da9-8d2b-9d9ab2d7b9ea" />
 
-Adds an indicator near your crosshair that lights up and color codes enemies targeting you (Pox Bursters, Trappers, Snipers, etc.).
+Adds an indicator near your crosshair that lights up and color-codes enemies targeting you (Pox Bursters, Trappers, Snipers, etc.).
 
 Fully compatible with Custom HUD.
 
