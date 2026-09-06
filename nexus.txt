@@ -20,4 +20,5 @@ Standalone mod that adds a small, customizable circle near your crosshair that l
 [b]Aggro Detection Colors[/b]
 - Threat Color Options (Pox Burster, Trapper, Hound, Mutant, Sniper, Captain, Monstrosity, Daemonhost, Bomber, Crusher, Flamer, Tox Flamer, Dreg Rager, Scab Rager)
 
-[b]Links:[/b] [url=https://github.com/MaddyMarv/Aggro-Indicator]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
+[b]Links:[/b]
+[url=https://github.com/MaddyMarv/Aggro-Indicator]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
