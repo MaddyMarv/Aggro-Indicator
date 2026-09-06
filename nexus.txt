@@ -1,4 +1,4 @@
-Adds an indicator near your crosshair that lights up and color-codes enemies targeting you (Pox Bursters, Trappers, Snipers, etc.).
+Adds an indicator near your crosshair that lights up and color codes enemies targeting you (Pox Bursters, Trappers, Snipers, etc.).
 
 Fully compatible with Custom HUD.
 
