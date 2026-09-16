@@ -1,6 +1,6 @@
 return {
     run = function()
-        fassert(rawget(_G, "new_mod"), "`aggro_indicator` requires the Darktide Mod Framework.")
+        fassert(rawget(_G, "new_mod"), "`aggro_indicator` encountered an error loading the Darktide Mod Framework.")
 
         new_mod("aggro_indicator", {
             mod_script       = "aggro_indicator/scripts/mods/aggro_indicator/aggro_indicator",
