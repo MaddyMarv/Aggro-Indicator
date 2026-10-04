@@ -318,10 +318,13 @@ function AggroDetection.scan(dt)
                                     enemy_unit = unit,
                                 }
                             elseif new_priority == existing_priority and existing then
-                                local target_pos = POSITION_LOOKUP[target_unit] or (Unit.alive(target_unit) and Unit.local_position(target_unit, 1))
-                                local current_enemy_pos = POSITION_LOOKUP[existing.enemy_unit] or (Unit.alive(existing.enemy_unit) and Unit.local_position(existing.enemy_unit, 1))
-                                local new_enemy_pos = POSITION_LOOKUP[unit] or (Unit.alive(unit) and Unit.local_position(unit, 1))
-                                
+                                local target_pos = POSITION_LOOKUP[target_unit] or
+                                (Unit.alive(target_unit) and Unit.local_position(target_unit, 1))
+                                local current_enemy_pos = POSITION_LOOKUP[existing.enemy_unit] or
+                                (Unit.alive(existing.enemy_unit) and Unit.local_position(existing.enemy_unit, 1))
+                                local new_enemy_pos = POSITION_LOOKUP[unit] or
+                                (Unit.alive(unit) and Unit.local_position(unit, 1))
+
                                 if target_pos and current_enemy_pos and new_enemy_pos then
                                     local current_dist = Vector3.distance_squared(target_pos, current_enemy_pos)
                                     local new_dist = Vector3.distance_squared(target_pos, new_enemy_pos)
