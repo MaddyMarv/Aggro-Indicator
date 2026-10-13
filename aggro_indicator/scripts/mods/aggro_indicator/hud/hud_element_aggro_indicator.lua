@@ -67,8 +67,8 @@ end
 HudElementAggroIndicator.update = function(self, dt, t, ui_renderer, render_settings, input_service)
     HudElementAggroIndicator.super.update(self, dt, t, ui_renderer, render_settings, input_service)
     
-    local is_enabled = mod:get("is_enabled")
-    if is_enabled == false then
+    local is_enabled = mod:is_enabled() and (mod:get("is_enabled") ~= false)
+    if not is_enabled then
         self._indicator_widget.style.circle_indicator.color[1] = 0
         self._indicator_widget.style.facing_arrow.color[1] = 0
         return

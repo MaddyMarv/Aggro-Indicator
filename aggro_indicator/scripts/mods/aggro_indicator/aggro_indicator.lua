@@ -35,9 +35,16 @@ mod.on_setting_changed = function(setting_id)
     end
 end
 
-mod.on_disabled = function(is_first_call)
+local function _clear_detection()
     local aggro_detection = mod:io_dofile("aggro_indicator/scripts/mods/aggro_indicator/aggro_detection")
     if aggro_detection and aggro_detection.clear then
         aggro_detection.clear()
     end
+end
+
+mod.on_disabled = function(is_first_call)
+    _clear_detection()
+end
+mod.on_unload = function(exit_game)
+    _clear_detection()
 end
