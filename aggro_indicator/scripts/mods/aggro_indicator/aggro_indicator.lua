@@ -45,6 +45,7 @@ end
 mod.on_disabled = function(is_first_call)
     _clear_detection()
 end
+
 mod.on_unload = function(exit_game)
     _clear_detection()
 end
