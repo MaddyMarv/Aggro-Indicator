@@ -5,7 +5,8 @@ Adds an indicator near your crosshair that lights up and color-codes enemies tar
 
 Fully compatible with Custom HUD.
 
-**Options:**
+<details>
+<summary><b>Mod Settings / Commands</b></summary>
 
 **General Settings**
 - Indicator X/Y Offset
@@ -22,5 +23,6 @@ Fully compatible with Custom HUD.
 
 **Aggro Detection Colors**
 - Threat Color Options (Pox Burster, Trapper, Hound, Mutant, Sniper, Captain, Monstrosity, Daemonhost, Bomber, Crusher, Flamer, Tox Flamer, Dreg Rager, Scab Rager)
+</details>
 
 🔗 **Links:** [Source Code](https://github.com/MaddyMarv/Aggro-Indicator) | [Nexus Mods Profile](https://www.nexusmods.com/profile/indicabunny) | [Support Me on Ko-fi](https://ko-fi.com/indicabunny)
