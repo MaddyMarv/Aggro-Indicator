@@ -1,6 +1,6 @@
 local mod = get_mod("aggro_indicator")
 
-mod:io_dofile("aggro_indicator/scripts/mods/aggro_indicator/aggro_detection")
+mod:io_dofile("aggro_indicator/scripts/mods/aggro_indicator/helpers/aggro_detection")
 
 mod:add_require_path("aggro_indicator/scripts/mods/aggro_indicator/hud/hud_element_aggro_indicator")
 
@@ -48,7 +48,7 @@ mod.on_setting_changed = function(setting_id)
 end
 
 local function _clear_detection()
-	local aggro_detection = mod:io_dofile("aggro_indicator/scripts/mods/aggro_indicator/aggro_detection")
+	local aggro_detection = mod:io_dofile("aggro_indicator/scripts/mods/aggro_indicator/helpers/aggro_detection")
 	if aggro_detection and aggro_detection.clear then
 		aggro_detection.clear()
 	end

@@ -3,7 +3,7 @@ local mod = get_mod("aggro_indicator")
 local UIWorkspaceSettings = require("scripts/settings/ui/ui_workspace_settings")
 local UIWidget = require("scripts/managers/ui/ui_widget")
 local ScriptCamera = require("scripts/foundation/utilities/script_camera")
-local AggroDetection = mod:io_dofile("aggro_indicator/scripts/mods/aggro_indicator/aggro_detection")
+local AggroDetection = mod:io_dofile("aggro_indicator/scripts/mods/aggro_indicator/helpers/aggro_detection")
 
 local scenegraph_definition = {
 	screen = UIWorkspaceSettings.screen,
