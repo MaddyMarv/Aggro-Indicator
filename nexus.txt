@@ -15,10 +15,10 @@ Fully compatible with Custom HUD.
 - Arrow Orbit Distance
 
 [b]Aggro Detection (Types)[/b]
-- Threat Detection Options (Pox Bursters, Trappers, Hounds, Mutants, Snipers, Captains, Monstrosities, Daemonhosts, Bombers, Crushers, Flamers, Tox Flamers, Dreg Ragers, Scab Ragers)
+- Threat Detection Options (Pox Bursters, Trappers, Hounds, Mutants, Snipers, Captains, Monstrosities, Daemonhosts, Bombers, Crushers, Flamers/Tox Flamers, Ragers)
 
 [b]Aggro Detection Colors[/b]
-- Threat Color Options (Pox Burster, Trapper, Hound, Mutant, Sniper, Captain, Monstrosity, Daemonhost, Bomber, Crusher, Flamer, Tox Flamer, Dreg Rager, Scab Rager)
+- Threat Color Options (Pox Burster, Trapper, Hound, Mutant, Sniper, Captain, Monstrosity, Daemonhost, Bomber, Crusher, Flamer, Rager)
 [/spoiler]
 
 [b]Links:[/b]

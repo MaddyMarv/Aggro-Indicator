@@ -19,10 +19,10 @@ Fully compatible with Custom HUD.
 - Arrow Orbit Distance
 
 **Aggro Detection (Types)**
-- Threat Detection Options (Pox Bursters, Trappers, Hounds, Mutants, Snipers, Captains, Monstrosities, Daemonhosts, Bombers, Crushers, Flamers, Tox Flamers, Dreg Ragers, Scab Ragers)
+- Threat Detection Options (Pox Bursters, Trappers, Hounds, Mutants, Snipers, Captains, Monstrosities, Daemonhosts, Bombers, Crushers, Flamers/Tox Flamers, Ragers)
 
 **Aggro Detection Colors**
-- Threat Color Options (Pox Burster, Trapper, Hound, Mutant, Sniper, Captain, Monstrosity, Daemonhost, Bomber, Crusher, Flamer, Tox Flamer, Dreg Rager, Scab Rager)
+- Threat Color Options (Pox Burster, Trapper, Hound, Mutant, Sniper, Captain, Monstrosity, Daemonhost, Bomber, Crusher, Flamer, Rager)
 </details>
 
 🔗 **Links:** [Source Code](https://github.com/MaddyMarv/Aggro-Indicator) | [Nexus Mods Profile](https://www.nexusmods.com/profile/indicabunny) | [Support Me on Ko-fi](https://ko-fi.com/indicabunny)
